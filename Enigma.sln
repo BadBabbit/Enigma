@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma", "EnigmaMachine\Enigma.csproj", "{05E83B73-E394-407D-B8EF-78631E59610E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05E83B73-E394-407D-B8EF-78631E59610E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E83B73-E394-407D-B8EF-78631E59610E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E83B73-E394-407D-B8EF-78631E59610E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E83B73-E394-407D-B8EF-78631E59610E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD74EC56-5133-4FBD-8509-31FC44A5B71E}
+	EndGlobalSection
+EndGlobal
