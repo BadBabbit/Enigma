@@ -1,0 +1,29 @@
+{
+  "plugboad": [
+    "AF",
+    "LB",
+    "YE"
+  ],
+  "rotors": {
+    "I": "---",
+    "II": "---",
+    "III": "---",
+    "IV": "---",
+    "V": "---",
+    "positions": [
+      {
+        "rotor": "I",
+        "start_position": 4
+      },
+      {
+        "rotor": "III",
+        "start_position": 19
+      },
+      {
+        "rotor": "II",
+        "start_position": 12
+      }
+    ]
+  },
+  "reflector": "---"
+}
