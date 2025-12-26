@@ -11,11 +11,6 @@ namespace Enigma.Components
     /// </summary>
     internal class Keyboard
     {
-        /// <summary>
-        /// The set of keys that should be enciphered through the Enigma machine (is the set of letters in the
-        /// English alphabet).
-        /// </summary>
-        private static readonly string encipheredKeys = "QWERTYUIOPASDFGHJKLZXCVBNM";
 
         /// <summary>
         /// This class represents a single keystroke input. Defines behaviour for whether or not a given
@@ -59,9 +54,8 @@ namespace Enigma.Components
         {
             ConsoleKeyInfo cki = Console.ReadKey(true);
             char key = Char.ToUpper(cki.KeyChar);
-            bool encrypt = encipheredKeys.Contains(key);
             bool terminator = cki.Key == ConsoleKey.Enter;
-            return new Input(key, encrypt, terminator);
+            return new Input(key, Char.IsLetter(key), terminator);
         }
     }
 }
