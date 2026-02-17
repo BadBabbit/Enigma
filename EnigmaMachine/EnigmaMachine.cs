@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 using Enigma.Components;
 using Enigma;
@@ -16,11 +17,12 @@ namespace Enigma
         public static void Main(string[] args)
         {
 
-            List<string> plugboardConfig = ConfigManager.GetPlugboardConfig();
-            Console.WriteLine($"Plugboard configuration:");
-            foreach (string plugboardConnection in plugboardConfig)
+            ILogger logger = Logger.GetInstance();
+            MachineConfig config = MachineConfig.Instance;
+            logger.LogDebug($"Plugboard configuration:");
+            foreach (string plugboardConnection in config.Plugboard)
             {
-                Console.WriteLine($"\t{plugboardConnection}");
+                logger.LogDebug($"\t{plugboardConnection}");
             }
             Keyboard keyboard = new Keyboard();
             while (true)
