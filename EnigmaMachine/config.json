@@ -5,25 +5,55 @@
     "YE"
   ],
   "rotors": {
-    "I": "---",
-    "II": "---",
-    "III": "---",
-    "IV": "---",
-    "V": "---",
+    "I": {
+      "A": "E",
+      "B": "J",
+      "C": "M",
+      "...": "...",
+    },
+    "II": {
+      "A": "A",
+      "B": "J",
+      "C": "D",
+      "...": "..."
+    },
+    "III": {
+      "A": "B",
+      "B": "D",
+      "C": "F",
+      "...": "..."
+    },
+    "IV": {
+      "A": "E",
+      "B": "S",
+      "C": "O",
+      "...": "..."
+    },
+    "V": {
+      "A": "V",
+      "B": "Z",
+      "C": "G",
+      "...": "..."
+    },
     "positions": [
       {
         "rotor": "I",
-        "start_position": 4
+        "position": 4
       },
       {
         "rotor": "III",
-        "start_position": 19
+        "position": 19
       },
       {
         "rotor": "II",
-        "start_position": 12
+        "position": 12
       }
     ]
   },
-  "reflector": "---"
+  "reflector": {
+    "A": "Y",
+    "B": "R",
+    "C": "U",
+    "...": "..."
+  }
 }

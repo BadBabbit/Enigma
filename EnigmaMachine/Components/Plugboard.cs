@@ -19,5 +19,6 @@ namespace Enigma.Components
     /// </summary>
     internal class Plugboard
     {
+        
     }
 }
