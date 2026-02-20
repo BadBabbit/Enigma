@@ -13,11 +13,35 @@ namespace Enigma.Utils
     {
         private Dictionary<T1, T2> _forward = new Dictionary<T1, T2>();
         private Dictionary<T2, T1> _reverse = new Dictionary<T2, T1>();
+        public int Length { get { return this.GetLength(); } }
 
-        public Map()
+        private void Initialise()
         {
             this.Forward = new Indexer<T1, T2>(_forward);
             this.Reverse = new Indexer<T2, T1>(_reverse);
+        }
+
+        private int GetLength()
+        {
+            return _forward.Count();
+        }
+
+        public Map()
+        {
+            Initialise();
+        }
+
+        /// <summary>
+        /// initialise a map using a dictionary.
+        /// </summary>
+        /// <param name="dictionary"></param>
+        public Map(Dictionary<T1, T2> dictionary)
+        {
+            Initialise();
+            foreach (T1 key in dictionary.Keys)
+            {
+                this.Add(key, dictionary[key]);
+            }
         }
 
         /// <summary>
