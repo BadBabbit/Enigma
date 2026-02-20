@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Enigma.Components;
+using Enigma.Utils;
 
 
 namespace Enigma;
@@ -24,7 +25,18 @@ internal class EnigmaMachine
     /// </summary>
     public EnigmaMachine()
     {
-        // load plugboard settings from config file and initialize plugboard
+        MachineConfig config = MachineConfig.Instance;
+        plugboard = new Plugboard(config.Plugboard);
+        rotors = new List<Rotor>();
+
+        // load rotor positions from config. for each rotor position, grab name and load definition as a map
+        foreach (RotorPosition position in config.Rotors.rotorPositions)
+        {
+            Map<char, char> map = new Map<char, char>(config.Rotors.definitions[position.rotor]);
+            Rotor rotor = new Rotor(map, position.position);
+            rotors.Add(rotor);
+        }
+        // load plugboard settings from config file and initialise plugboard
 
         // load rotor settings from config file and initialize rotors
 
