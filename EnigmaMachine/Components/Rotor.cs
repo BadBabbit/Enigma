@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Enigma.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,11 @@ namespace Enigma.Components
 {
     internal class Rotor
     {
-        private Dictionary<Char, Char> mappings;
+        private Map<char, char> mappings;
         private int position;
         public void Step()
         {
-            if (position == mappings.Keys.Count - 1)
+            if (position == mappings.Length - 1)
             {
                 position = 0;
             }
@@ -22,7 +23,7 @@ namespace Enigma.Components
             }
         }
 
-        public Rotor(Dictionary<Char, Char> mappings, int position)
+        public Rotor(Map<char, char> mappings, int position)
         {
             this.mappings = mappings;
             this.position = position;
