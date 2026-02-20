@@ -1,36 +1,33 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-
 using Enigma.Components;
-using Enigma;
 
 
-namespace Enigma
+namespace Enigma;
+
+/// <summary>
+/// initialises and manages the overall state of the Enigma machine
+///</summary>
+internal class EnigmaMachine
 {
-    public class EnigmaMachine
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="args"></param>
-        public static void Main(string[] args)
-        {
+    private Plugboard plugboard;
+    private List<Rotor> rotors;
+    private Reflector reflector;
 
-            ILogger logger = Logger.GetInstance();
-            MachineConfig config = MachineConfig.Instance;
-            logger.LogDebug($"Plugboard configuration:");
-            foreach (string plugboardConnection in config.Plugboard)
-            {
-                logger.LogDebug($"\t{plugboardConnection}");
-            }
-            Keyboard keyboard = new Keyboard();
-            while (true)
-            {
-                Keyboard.Input input = keyboard.GetSingleKeyInput();
-                Console.Write(input.Key);
-                if (input.Terminator) break;
-            }
-        }
+
+    /// <summary>
+    /// initializes a new instance of the <see cref="EnigmaMachine"/> class using config file settings
+    /// </summary>
+    public EnigmaMachine()
+    {
+        // load plugboard settings from config file and initialize plugboard
+
+        // load rotor settings from config file and initialize rotors
+
+        // load reflector settings from config file and initialize reflector
     }
 }
